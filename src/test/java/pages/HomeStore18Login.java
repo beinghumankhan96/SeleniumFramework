@@ -69,7 +69,7 @@ public class HomeStore18Login {
 
     public void validateLoginPage() {
         String loginTitle=driver.findElement(By.xpath("//h1[@class='m-zero h2' and contains(text(),'Login')]")).getText();
-        Assert.assertEquals("Login",loginTitle);  //hard assertion most of the time we use this only, if true then execute next steps
+        Assert.assertEquals("Login",loginTitle);  //hard assertion: most of the time we use this only, if true then execute next steps
 
         try {
             Thread.sleep(2000);

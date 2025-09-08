@@ -10,7 +10,8 @@ import io.cucumber.junit.*;
         plugin = {
                 "pretty",
                 "html:target/cucumber-html-report.html",   // generates HTML
-                "json:target/cucumber.json"            // generates JSON
+                "json:target/cucumber.json" ,
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"// generates JS// Extent Report
         },
        // strict=true,
         monochrome = true

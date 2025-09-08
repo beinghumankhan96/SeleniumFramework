@@ -5,14 +5,11 @@ import libraries.SendKeysWrapper;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import java.io.File;
-import java.io.IOException;
 
 public class HomeStore18WirelessAndHeadphonePage {
+
     private WebDriver driver;
     By headphoneMenu =By.xpath("//*[@class='list-menu d-b22lock link__title']");
     By wireLessAndBluetoothHeadphoneSubMenu =By.xpath("//a[@href='/collections/wireless-bluetooth-headphones121']");
