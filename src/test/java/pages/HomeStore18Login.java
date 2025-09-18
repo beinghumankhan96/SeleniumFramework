@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.junit.Assert;
+import libraries.LoggerHelper;
 
 public class HomeStore18Login {
     private WebDriver driver;
@@ -104,14 +105,18 @@ public class HomeStore18Login {
 //    }
 
     public void userEntersValidAnd(String userName, String password1) {
-        System.out.println("launching the browser again");
+        LoggerHelper.info("About to enter the details");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         driver.findElement(emailId).sendKeys(userName);
+        LoggerHelper.info("Username["+userName+"] entered successfully");
+
         driver.findElement(password).sendKeys(password1);
+        LoggerHelper.info("password["+password1+"] entered successfully");
+
         try {
             Thread.sleep(10);
         } catch (InterruptedException e) {

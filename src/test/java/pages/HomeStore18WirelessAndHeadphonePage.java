@@ -6,6 +6,7 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import libraries.LoggerHelper;
 
 
 public class HomeStore18WirelessAndHeadphonePage {
@@ -36,9 +37,9 @@ public class HomeStore18WirelessAndHeadphonePage {
     }
 
     public void userShouldBeRedirectedToTheWirelessAndBluetoothHeadphonesSection() {
-        System.out.println("I am trying to capture the title of the headphone page");
+        LoggerHelper.info("I am trying to capture the title of the headphone page");
         String title = driver.findElement(wirelessAndHeadphonePageTitle).getText();
         Assert.assertEquals("Wireless & Bluetooth Headphones", title);
-        System.out.println("I am done to capture the title of the headphone page");
+        LoggerHelper.info("I am done to capture the title of the headphone page");
     }
 }

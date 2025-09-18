@@ -18,7 +18,7 @@ public class CommonFunctionalities {
     }
 
     public static void captureTheScreenshot(WebDriver driver, String fileName){
-        System.out.println("About to capture the screenshot");
+        LoggerHelper.info("About to capture the screenshot");
         TakesScreenshot takesScreenshot = ((TakesScreenshot) driver);
         File file = takesScreenshot.getScreenshotAs(OutputType.FILE);
 
@@ -27,10 +27,10 @@ public class CommonFunctionalities {
         try {
             // Copy file to desired location
             FileUtils.copyFile(file, destination);
-            System.out.println("Screenshot saved successfully.");
+            LoggerHelper.info("Screenshot saved successfully.");
         } catch (IOException e) {
-            System.out.println("Failed to save screenshot: " + e.getMessage());
+            LoggerHelper.info("Failed to save screenshot: " + e.getMessage());
         }
-        System.out.println("screenshot is being captured");
+        LoggerHelper.info("screenshot is being captured");
     }
 }
